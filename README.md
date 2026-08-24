@@ -1,62 +1,62 @@
-![Build and Deploy Website](https://github.com/swcarpentry/r-novice-inflammation/workflows/Build%20and%20Deploy%20Website/badge.svg)
-[![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
-[![Slack Status](https://img.shields.io/badge/Slack_Channel-swc--r--inflammation-E01563.svg)](https://swcarpentry.slack.com/messages/C9WDPCMUG)
+# Programming with R
 
-# r-novice-inflammation
+*Pomona College HPC Workshop Series*
 
-[The Carpentries](https://carpentries.org/) teach foundational coding, and data science skills to
-researchers worldwide. This GitHub repository generates the Software Carpentry lesson website
-"Introduction to R for non-programmers using inflammation data." The [lesson website can be viewed
-here][online]. Making changes in this GitHub repository
-allows us to change the content of the lesson website.
+R programming for research: data structures, functions, loops and command-line scripts. Adapted from Software Carpentry for Pomona College.
 
-The following people are maintainers for this lesson, and are responsible for determining which
-changes to incorporate into the lesson:
+**Lesson site:** <https://pomona-college.github.io/hpc-r-novice-inflammation/>
 
-- [Diya Das](https://diyadas.github.io) (@diyadas)
-- [Rohit Goswami](https://carpentries.org/instructors/#HaoZeke) (@haozeke)
+## About this lesson
 
-Alumni:
+This is Pomona College's adaptation of the Software Carpentry lesson
+[Programming with R](https://swcarpentry.github.io/r-novice-inflammation/), reworked for researchers and
+students using the **Sagehen** HPC cluster. Alongside the original material it
+covers how the work is done here: launching sessions through the OnDemand
+portal, where data and results belong on Sagehen's storage tiers, and when to
+move an analysis from an interactive session into a submitted job.
 
-- [Daniel Chen](https://software-carpentry.org/team/#chen_daniel) (@chendaniely)
-- [Katrin Leinweber](https://carpentries.org/instructors/#katrinleinweber) (@katrinleinweber)
+It is one of 23 workshops in the Pomona College HPC Workshop Series, maintained
+by ITS Research Computing.
 
-The goal of this lesson is to teach novice programmers to write modular code to
-perform a data analysis. R is used to teach these skills because it is a
-commonly used programming language in many scientific disciplines. However, the
-emphasis is not on teaching every aspect of R, but instead on
-language agnostic principles like automation with loops and encapsulation with
-functions (see [Best Practices for Scientific Computing][best-practices] to
-learn more). This lesson is a translation of the [Python version][py],
-and is also available in [MATLAB].
+## Getting started
 
-The example used in this lesson analyzes a set of 12 data files with
-inflammation data collected from a trial for a new treatment for arthritis (the
-data was simulated). Learners are shown how it is better to create a function
-and apply it to each of the 12 files using a loop instead of using copy-paste
-to analyze the 12 files individually.
+You do not need to install anything locally. Sign in to the OnDemand portal at
+<https://ondemand.hpc.pomona.edu/> with your Pomona credentials and DUO, and
+launch an interactive session from there. Full instructions, including the
+local-install alternative, are on the lesson's **Setup** page.
+
+You will need a Sagehen account. If you do not have one, contact
+<its-hpc@pomona.edu>.
+
+## Attribution
+
+Adapted from [swcarpentry/r-novice-inflammation](https://github.com/swcarpentry/r-novice-inflammation) by
+[Software Carpentry](https://software-carpentry.org/), used under
+[CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/). Pomona College
+modifications are also released under CC-BY 4.0.
+
+The original lesson is maintained by Diya Das, Rohit Goswami, Daniel Chen and Katrin Leinweber, with contributions from many others. Please cite the original lesson as set out in `CITATION`.
+
+"The Carpentries", "Software Carpentry" and their logos are registered
+trademarks of [Community Initiatives](https://communityin.org/). This adaptation
+is not an official Software Carpentry lesson and is not endorsed by The
+Carpentries.
 
 ## Contributing
 
-We value your contributions. How to contribute to this lesson is outlined in
-[CONTRIBUTING.md](https://github.com/swcarpentry/r-novice-inflammation/blob/master/CONTRIBUTING.md).
-If you have questions about our contributing guidelines, please create a new issue in the [issues]
-tab and one of the maintainers will respond.
+Corrections and improvements are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+In short: Sagehen-specific changes belong here, while improvements to the
+underlying lesson are better sent upstream to
+[swcarpentry/r-novice-inflammation](https://github.com/swcarpentry/r-novice-inflammation) so the wider community
+benefits.
 
-## Getting Help
+All contributors are expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-Please see [https://github.com/carpentries/lesson-example](https://github.com/carpentries/lesson-example)
-for instructions on formatting, building, and submitting lessons,
-or run `make` in this directory for a list of helpful commands.
+## Licence
 
-If you have questions or proposals, please send them to the [r-discuss] mailing list.
+See [LICENSE.md](LICENSE.md). Instructional material is CC-BY 4.0; example code
+is MIT.
 
-[online]: https://swcarpentry.github.io/r-novice-inflammation/
-[best-practices]: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745
-[py]: https://github.com/swcarpentry/python-novice-inflammation
-[MATLAB]: https://github.com/swcarpentry/matlab-novice-inflammation
-[issues]: https://github.com/swcarpentry/r-novice-inflammation/issues
-[r-discuss]: https://carpentries.topicbox.com/groups/discuss
+## Contact
 
-
-
+Pomona College ITS Research Computing — <its-hpc@pomona.edu>

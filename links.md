@@ -19,7 +19,7 @@
 [r-cheatsheets]: https://posit.co/resources/cheatsheets/ "RStudio Cheat Sheets"
 [testthat]: https://testthat.r-lib.org "testthat: Unit Testing"
 [microbenchmark]: https://cran.r-project.org/web/packages/microbenchmark/index.html "microbenchmark Package"
-[sagehen-wiki]: https://github.com/pomona-college-hpc "Sagehen HPC Workshop Series on GitHub"
+[sagehen-wiki]: https://github.com/Pomona-College "Sagehen HPC Workshop Series on GitHub"
 [ondemand-portal]: https://ondemand.hpc.pomona.edu "OnDemand HPC Portal"
 [its-contact]: mailto:its-hpc@pomona.edu "HPC Support Email"
 [pomona-its]: https://www.pomona.edu/its/ "Pomona College ITS"

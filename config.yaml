@@ -12,6 +12,7 @@ carpentry: 'incubator'
 
 # Overall title for pages.
 title: 'Programming with R — Pomona College HPC Workshop Series'
+description: 'R programming for research: data structures, functions, loops and command-line scripts. Adapted from Software Carpentry for Pomona College.'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: '2014-12-18'

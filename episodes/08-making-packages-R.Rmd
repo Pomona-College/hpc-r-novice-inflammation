@@ -238,7 +238,27 @@ kelvin_to_fahrenheit <- function(temp_K) {
 [roxygen2]: https://cran.r-project.org/package=roxygen2
 
 
-:::::::::::::::::::::::::::::::::::::::: keypoints
+:::::::::::::::::::::::::::::::::::::::::::::  callout
+
+## Installing R packages on Sagehen
+
+You cannot write to the system R library on a shared cluster. The first time
+you run `install.packages()`, R offers to create a personal library in your
+home directory — accept, and everything you install afterwards goes there.
+
+```r
+install.packages('devtools')   # installs to your personal library
+.libPaths()                    # shows where R is actually looking
+```
+
+Two things worth knowing. Personal libraries count against your 100 GB `/rhome`
+quota, and a large package set adds up. And packages are built against the R
+version that installed them, so if you switch R versions you may need to
+reinstall — pin `module load r/4.5.1` in scripts you want to keep working.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - A package is the basic unit of reusability in R.
 - Every package must have a DESCRIPTION file and an R directory containing code. These are created by us.

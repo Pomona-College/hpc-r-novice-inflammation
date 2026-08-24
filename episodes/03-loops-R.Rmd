@@ -401,7 +401,27 @@ analyze_all <- function(folder = "data", pattern) {
 [Noble2009]: https://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1000424
 
 
-:::::::::::::::::::::::::::::::::::::::: keypoints
+:::::::::::::::::::::::::::::::::::::::::::::  callout
+
+## When to stop looping and start a job array
+
+Looping over a dozen data files in R is sensible. Looping over several hundred,
+one after another, wastes most of the cluster.
+
+Because each file is independent, SLURM can process them at the same time using
+a job array — one task per file, each picking its input from
+`$SLURM_ARRAY_TASK_ID`:
+
+```bash
+#SBATCH --array=1-300
+```
+
+Workshop 18, *Parallel Computing Fundamentals*, covers the pattern. It is
+usually the largest speed-up available to anyone processing many files.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Use `for (variable in collection)` to process the elements of a collection one at a time.
 - The body of a `for` loop is surrounded by curly braces (`{}`).

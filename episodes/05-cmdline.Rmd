@@ -437,7 +437,33 @@ cat line-count.R
 [bash-jobs]: https://www.gnu.org/software/bash/manual/bash.html#Job-Control-Basics
 
 
-:::::::::::::::::::::::::::::::::::::::: keypoints
+:::::::::::::::::::::::::::::::::::::::::::::  callout
+
+## Running R scripts as Sagehen jobs
+
+A command-line R program is exactly what you submit to the cluster. Once your
+analysis runs with `Rscript`, it can run unattended:
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=r-analysis
+#SBATCH --partition=amd
+#SBATCH --time=02:00:00
+#SBATCH --mem=8G
+#SBATCH --output=analysis-%j.log
+
+module load r
+Rscript readings.R --mean inflammation-*.csv
+```
+
+Submit with `sbatch analysis.sh`. `%j` puts the job ID in the log filename, so
+repeated runs do not overwrite each other's output.
+
+Workshop 9, *SLURM Job Scheduling on Sagehen*, covers the options in detail.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Use `commandArgs(trailingOnly = TRUE)` to obtain a vector of the command-line arguments that a program was run with.
 - Avoid silent failures.

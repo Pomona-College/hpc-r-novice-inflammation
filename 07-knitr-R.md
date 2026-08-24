@@ -1,0 +1,179 @@
+---
+title: Dynamic Reports with knitr
+teaching: 20
+exercises: 0
+source: Rmd
+---
+
+::::::::::::::::::::::::::::::::::::::: objectives
+
+- Understand the value of `knitr` for generating dynamic documents that include text, code, and results.
+- Control basic formatting using markdown syntax.
+- Be able to create, edit, and compile an .Rmd document including code chunks and inline code.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: questions
+
+- How can I put my text, code, and results all in one document?
+- How do I use `knitr`?
+- How do I write in Markdown?
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+`knitr` is an R package that allows you to organize your notes, code, and results in a single document. It's a great tool for "literate programming" -- the idea that your code should be readable by humans as well as computers! It also keeps your writing and results together, so if you collect some new data or change how you clean the data, you just have to re-compile the document and you're up to date!
+
+You write `knitr` documents in a simple plain text-like format called markdown, which allows you to format text using intuitive notation, so that you can focus on the content you're writing and generating a well-formatted document when needed. In fact, you can turn your plain text (and R code and results) into an HTML file or, if you have an installation of LaTeX and [Pandoc][pandoc] on your machine, a PDF, or even a Word document (if you must!).
+
+To get started, install the `knitr` package.
+
+
+```r
+install.packages("knitr")
+```
+
+To create a new `knitr` document in RStudio, click on File -> New File, and then select "R Markdown..." from the dropdown list. Accept the default options in the dialog box that follows (but note the other document formats to choose from, including presentations). Save the file and click on the dropdown arrow next to the "Knit" button at the top of the script window. This will bring up another dropdown menu, this time with a number of options for controlling `knitr` output. Select the "Knit to HTML" option to create an HTML document based on the markdown file. Compare the output to the source.
+
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Formatting Text in Markdown
+
+Visit [https://rmarkdown.rstudio.com/authoring\_basics.html](https://rmarkdown.rstudio.com/authoring_basics.html) and briefly check out some of the formatting options.
+
+In the example document add
+
+- Headers using `#`
+- Emphasis using asterisk: \*italics\* and \*\*bold\*\*
+- Lists using `*` and numbered lists using `1.`, `2.`, etc.
+- **Bonus:** Create a table
+
+
+:::::::::::::::  solution
+
+## Solution
+
+A small Markdown snippet exercising every requested feature looks like this:
+
+```markdown
+# Inflammation report
+
+## Headers
+
+You can nest headers: `#` is the top level, `##` is the next, and so on.
+
+## Emphasis
+
+R Markdown supports *italics* with single asterisks and **bold** with double asterisks.
+
+## Lists
+
+- An unordered list item
+- Another unordered item
+
+1. The first step
+2. The second step
+3. The third step
+
+## Bonus: a table
+
+| Patient | Day 1 | Day 2 | Day 3 |
+|---------|-------|-------|-------|
+| 01      | 0     | 1     | 2     |
+| 02      | 1     | 2     | 4     |
+```
+
+When you click **Knit to HTML**, the resulting HTML document should render the headers in three sizes, the words *italics* in italic and **bold** in bold, both lists with the expected bullet/number styles, and the table as a properly aligned three-row grid. If anything renders as raw asterisks or pipes, you most likely have a stray space at the start of the line — Markdown is whitespace-sensitive, especially around list markers.
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Markdown also supports LaTeX equation editing.
+We can display pretty equations by enclosing them in `$`,
+e.g., `$\alpha = \dfrac{1}{(1 - \beta)^2}$` renders as:
+$\alpha = \dfrac{1}{(1 - \beta)^2}$
+
+The top of the source (.Rmd) file has some header material in YAML format (enclosed by triple dashes).
+Some of this gets displayed in the output header, other of it provides formatting information to the conversion engine.
+
+To distinguish R code from text, RMarkdown uses three back-ticks followed by `{r}` to distinguish a "code chunk".
+In RStudio, the keyboard shortcut to create a code chunk is <kbd>Command</kbd>\+<kbd>Option</kbd>\+<kbd>I</kbd> or <kbd>Ctrl</kbd>\+<kbd>Alt</kbd>\+<kbd>I</kbd>.
+
+A code chunk will set off the code and its results in the output document,
+but you can also print the results of code within a text block by enclosing code like so: ```r code-here```.
+
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Use knitr to Produce a Report
+
+1. Open a new .Rmd script and save it as inflammation\_report.Rmd
+2. Copy code from earlier into code chunks to read the inflammation data and plot average inflammation.
+3. Add a few notes describing what the code does and what the main findings are. Include an in-line calculation of the median inflammation level.
+4. `knit` the document and view the html result.
+
+
+:::::::::::::::  solution
+
+## Solution
+
+A minimal `inflammation_report.Rmd` looks like this:
+
+````markdown
+---
+title: "Inflammation report"
+author: "Cecil Sagehen"
+output: html_document
+---
+
+
+
+## Loading the data
+
+
+```r
+dat <- read.csv("data/inflammation-01.csv", header = FALSE)
+```
+
+The dataset has 60 patients and 40 days of follow-up.
+
+## Average inflammation by day
+
+
+```r
+avg_day <- apply(dat, 2, mean)
+plot(avg_day,
+     type = "l",
+     xlab = "Day", ylab = "Mean inflammation")
+```
+
+<img src="fig/07-knitr-R-rendered-plot-mean-1.png" style="display: block; margin: auto;" />
+
+The median across all patient–day observations is 5.
+````
+
+When you click **Knit**, RStudio (locally or on the Sagehen OnDemand RStudio Server) produces an HTML file containing:
+
+- A title block with title, author, and date generated from the YAML header
+- A heading "Loading the data" followed by a sentence stating `40 patients and 40 days` (from the inline R expressions)
+- A heading "Average inflammation by day" followed by the line plot of column means
+- A closing sentence with the numerical median (around 3.34 for the inflammation example dataset)
+
+The point of the exercise is that the prose, the code, and the figures all live in one file — re-knitting after the data changes regenerates every number and figure automatically.
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+[pandoc]: https://pandoc.org/
+
+:::::::::::::::::::::::::::::::::::::::: keypoints
+
+- Use knitr to generate reports that combine text, code, and results.
+- Use Markdown to format text.
+- Put code in blocks delimited by triple back quotes followed by `{r}`.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+

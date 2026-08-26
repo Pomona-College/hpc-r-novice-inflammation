@@ -72,7 +72,10 @@ Learners need to understand the concepts of files and directories
 (including the working directory).
 We often use RStudio to teach this lesson, but it is not required.
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Acknowledgments
 
+Developed by **Andrew Wilson**, Director of Research Computing and Digital
+Scholarship at Pomona College, with **Andrei Motchenko**, who tested, edited
+and produced screenshots for the workshop series.

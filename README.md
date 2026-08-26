@@ -10,7 +10,7 @@ R programming for research: data structures, functions, loops and command-line s
 
 This is Pomona College's adaptation of the Software Carpentry lesson
 [Programming with R](https://swcarpentry.github.io/r-novice-inflammation/), reworked for researchers and
-students using the **Sagehen** HPC cluster. Alongside the original material it
+students using the **Sagehen HPC** HPC cluster. Alongside the original material it
 covers how the work is done here: launching sessions through the OnDemand
 portal, where data and results belong on Sagehen's storage tiers, and when to
 move an analysis from an interactive session into a submitted job.

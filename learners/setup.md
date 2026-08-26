@@ -2,7 +2,7 @@
 title: Setup
 ---
 
-## Running on Sagehen (recommended at Pomona)
+## Running on Sagehen HPC (recommended at Pomona)
 
 If you have a Pomona College HPC account, you can complete this workshop entirely in the browser via the Sagehen OnDemand portal — no local installation required:
 

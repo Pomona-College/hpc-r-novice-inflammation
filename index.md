@@ -14,7 +14,7 @@ by [Software Carpentry](https://software-carpentry.org/).
 **Web Portal:** [OnDemand](https://ondemand.hpc.pomona.edu/)
 **Support:** its-hpc@pomona.edu
 
-R is available on the Sagehen cluster via `module load r` (module names are lowercase). You can also
+R is available on the Sagehen HPC cluster via `module load r` (module names are lowercase). You can also
 use RStudio Server through the OnDemand web portal for interactive work.
 
 *Adapted for Pomona College by Andrew Wilson, ITS Research Computing.

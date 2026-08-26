@@ -439,7 +439,7 @@ cat line-count.R
 
 :::::::::::::::::::::::::::::::::::::::::::::  callout
 
-## Running R scripts as Sagehen jobs
+## Running R scripts as Sagehen HPC jobs
 
 A command-line R program is exactly what you submit to the cluster. Once your
 analysis runs with `Rscript`, it can run unattended:

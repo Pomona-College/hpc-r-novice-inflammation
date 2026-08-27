@@ -1,7 +1,7 @@
 ---
 title: Analyzing Patient Data
 teaching: 45
-exercises: 0
+exercises: 10
 source: Rmd
 ---
 
@@ -30,7 +30,7 @@ source: Rmd
 
 
 We are studying inflammation in patients who have been given a new treatment for
-arthritis, and need to analyze the first dozen data sets (here is a link to [download the data for this lesson](data/r-novice-inflammation-data.zip)). On Sagehen, your Pomona biology lab might keep the equivalent files at `/bigdata/lab/biolab/inflammation/` so they sit next to the rest of the **Pomona biology cohort 2024** data.
+arthritis, and need to analyze the first dozen data sets (here is a link to [download the data for this lesson](data/r-novice-inflammation-data.zip)). On Sagehen HPC, your Pomona biology lab might keep the equivalent files at `/bigdata/lab/biolab/inflammation/` so they sit next to the rest of the **Pomona biology cohort 2024** data.
 The data sets are stored in [comma-separated values](../learners/reference.md#comma-separated-values-csv)
 (CSV) format. Each row holds the observations for just one patient. Each column
 holds the inflammation measured in a day, so we have a set of values in

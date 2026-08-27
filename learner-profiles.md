@@ -13,7 +13,7 @@ All three personas use Pomona's Sagehen HPC cluster either directly (via the OnD
 ## Profile 1: Maya — Biology PhD Candidate Working on Genomics
 
 ### Background
-Maya is a fourth-year PhD candidate in the Pomona–Claremont Graduate University biology programme. Her dissertation focuses on the gut microbiome of *Peromyscus californicus* deer mice trapped at the Bernard Field Station, and her PI has just returned from a sabbatical promising "we'll do all the analysis in R from now on." Maya has six months of metabarcoding sequencing data on Sagehen at `/bigdata/lab/biolab/microbiome/` and a deadline that involves both her qualifying exam and a manuscript for *Molecular Ecology*. Her co-advisor uses Bioconductor heavily and expects her to follow along.
+Maya is a fourth-year PhD candidate in the Pomona–Claremont Graduate University biology programme. Her dissertation focuses on the gut microbiome of *Peromyscus californicus* deer mice trapped at the Bernard Field Station, and her PI has just returned from a sabbatical promising "we'll do all the analysis in R from now on." Maya has six months of metabarcoding sequencing data on Sagehen HPC at `/bigdata/lab/biolab/microbiome/` and a deadline that involves both her qualifying exam and a manuscript for *Molecular Ecology*. Her co-advisor uses Bioconductor heavily and expects her to follow along.
 
 ### What She Knows
 - Strong wet-lab skills: extractions, library prep, quality control with a Bioanalyzer
@@ -35,7 +35,7 @@ Maya is a fourth-year PhD candidate in the Pomona–Claremont Graduate Universit
 - **Reproducibility matters.** *Molecular Ecology* now requires a `Code Availability` statement; she can't just hand-paste figures any more.
 - **She wants to graduate.** Six months of analysis on a deadline.
 
-### How She Will Use Sagehen
+### How She Will Use Sagehen HPC
 Maya runs R 4.5.3 on Sagehen via the OnDemand RStudio Server app, with an interactive SLURM session on the **amd** partition (`--cpus-per-task=16 --mem=128G --time=8:00:00`). Her project lives at `/bigdata/lab/biolab/maya/microbiome/` so it persists between sessions.
 
 ### Success Indicator
@@ -77,7 +77,7 @@ Ben is a senior at Pomona majoring in economics with a maths concentration, appl
 - **His thesis is large.** Five years of monthly CPS extracts is roughly 40 GB of CSVs; he cannot fit it in memory on his laptop.
 - **He wants to publish.** Having a clean, function-based R workflow makes his thesis chapter much easier to convert into a working paper after graduation.
 
-### How He Will Use Sagehen
+### How He Will Use Sagehen HPC
 Ben runs his thesis on Sagehen because the IPUMS extracts won't fit on a laptop. He requests an interactive `--mem=64G` session on the amd partition, mounts the IPUMS data from `/bigdata/lab/economics/ipums/`, and uses `data.table` (taught in Workshop 8) for the heavy lifting.
 
 ### Success Indicator
@@ -119,7 +119,7 @@ Priya is a postdoc in the Pomona College English department, joint-appointed wit
 - **Publication venues are changing.** Journals such as *Cultural Analytics* and *Journal of Cultural Analytics* now require code and data deposits.
 - **She wants to ask questions her qualitative methods cannot answer alone.** "Did the framing of *immigrant* shift between 1850 and 1910?" is a question text-mining can address at scale.
 
-### How She Will Use Sagehen
+### How She Will Use Sagehen HPC
 Priya does *not* want to install R on her laptop. She uses the OnDemand RStudio Server app on Sagehen exclusively, with her corpus stored at `/bigdata/lab/dhlab/newspapers/`. Her co-PI helped her open her HPC account through `its-hpc@pomona.edu`. The whole workflow lives behind one URL ([https://ondemand.hpc.pomona.edu](https://ondemand.hpc.pomona.edu)) and one DUO push.
 
 ### Success Indicator

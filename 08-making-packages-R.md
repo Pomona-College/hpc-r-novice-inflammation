@@ -1,7 +1,7 @@
 ---
 title: Making Packages in R
 teaching: 30
-exercises: 0
+exercises: 5
 source: Rmd
 ---
 
@@ -267,7 +267,7 @@ kelvin_to_fahrenheit <- function(temp_K) {
 
 :::::::::::::::::::::::::::::::::::::::::::::  callout
 
-## Installing R packages on Sagehen
+## Installing R packages on Sagehen HPC
 
 You cannot write to the system R library on a shared cluster. The first time
 you run `install.packages()`, R offers to create a personal library in your

@@ -1,7 +1,7 @@
 ---
 title: Best Practices for Writing R Code
 teaching: 10
-exercises: 0
+exercises: 5
 source: Rmd
 ---
 
@@ -25,7 +25,7 @@ source: Rmd
 
 ### Keep track of who wrote your code and its intended purpose
 
-Starting your code with an annotated description of what the code does when it is run will help you when you have to look at or change it in the future. Just one or two lines at the beginning of the file can save you or someone else a lot of time and effort when trying to understand what a particular script does. On Sagehen, where multiple lab members may share the same `/bigdata/lab/<labname>/` project directory, this is essential — Cecil Sagehen's lab teammates need to be able to open your script six months later (or, more often, ten minutes before a paper submission) and figure out what it does.
+Starting your code with an annotated description of what the code does when it is run will help you when you have to look at or change it in the future. Just one or two lines at the beginning of the file can save you or someone else a lot of time and effort when trying to understand what a particular script does. On Sagehen HPC, where multiple lab members may share the same `/bigdata/lab/<labname>/` project directory, this is essential — Cecil Sagehen's lab teammates need to be able to open your script six months later (or, more often, ten minutes before a paper submission) and figure out what it does.
 
 
 ```r

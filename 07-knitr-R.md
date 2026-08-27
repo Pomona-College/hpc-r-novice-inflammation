@@ -1,7 +1,7 @@
 ---
 title: Dynamic Reports with knitr
 teaching: 20
-exercises: 0
+exercises: 5
 source: Rmd
 ---
 
@@ -153,7 +153,7 @@ plot(avg_day,
 The median across all patient–day observations is 5.
 ````
 
-When you click **Knit**, RStudio (locally or on the Sagehen OnDemand RStudio Server) produces an HTML file containing:
+When you click **Knit**, RStudio (locally or on the Sagehen HPC OnDemand RStudio Server) produces an HTML file containing:
 
 - A title block with title, author, and date generated from the YAML header
 - A heading "Loading the data" followed by a sentence stating `40 patients and 40 days` (from the inline R expressions)

@@ -1,7 +1,7 @@
 ---
 title: Command-Line Programs
 teaching: 30
-exercises: 0
+exercises: 50
 source: Rmd
 ---
 
@@ -914,7 +914,7 @@ main()
 
 :::::::::::::::::::::::::::::::::::::::::::::  callout
 
-## Running R scripts as Sagehen jobs
+## Running R scripts as Sagehen HPC jobs
 
 A command-line R program is exactly what you submit to the cluster. Once your
 analysis runs with `Rscript`, it can run unattended:
